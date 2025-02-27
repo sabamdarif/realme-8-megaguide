@@ -53,34 +53,34 @@ III. [Rooting](/md/w-deep-testing.guide.md#iv-rooting)
 
 1. **Extract** and enter the folder of [MTK Client archive](https://codeload.github.com/bkerler/mtkclient/zip/f9fe6ca65c93c2eb05adef7787069103c0d79763)
 2. Open the console in [MTK Client's](https://codeload.github.com/bkerler/mtkclient/zip/f9fe6ca65c93c2eb05adef7787069103c0d79763) folder
-<p align="center"><img src="https://i.imgur.com/RJtobaI.png"></p>
+<p align="center"><img src="/images/open_in_cmd.png"></p>
 
 3. Get the needed libraries using command `python -m pip install -r requirements.txt`. Send the payload with `python mtk payload`. It should look like this:
-<p align="center"><img src="https://i.imgur.com/WSQsVj1.png"></p>
+<p align="center"><img src="/images/mtk_payload_started.png"></p>
 
 4. Make sure your phone is powered off, hold down both **Vol+, Vol-** and connect the usb cable. You will see something like this:
-<p align="center"><img src="https://i.imgur.com/lr7HIN0.png"></p>
+<p align="center"><img src="/images/mtk_payload_done.png"></p>
 
 5. The phone is now in BROM mode. Run the [SP Flash tool](https://drive.google.com/file/d/11XeUnCYtARZg2kx7J2JWWeLULieSIYrx/view?usp=sharing) `flash_tool.exe`
 
 6. Click on `Options > Option...` and make sure the right **COM Port** is selected, UART enabled and baud rate is set to **921600**.
 
-<p align="center"><img src="https://i.imgur.com/hnMsyeN.png"></p>
+<p align="center"><img src="/images/sp_flash_port.png"></p>
 
 7. Get [C.18 Firmware](https://drive.google.com/uc?id=1MPLnD4ofrW50u8V4C5I5srGucHJg60XW&export=download) and unpack it
 8. Load `MT6785_Android_scatter.txt` from the firmware's folder
-   <p align="center"><img src="https://i.imgur.com/8APQvkx.png"></p>
+   <p align="center"><img src="/images/select_scatter_c.18.png"></p>
 
 > [!CAUTION] 
 > 9. Remember to have **`Download Only`** mode or **you will lose critical partitions**
 
-<p align="center"><img src="https://i.imgur.com/M3aUNBs.png" width="300"></p>
+<p align="center"><img src="/images/select_download_only.png" width="300"></p>
 
 10. This process will take up to 15-20 minutes. To begin, click `Download` ([**No progress? Click me**](https://github.com/driedpampas/realme-8-megaguide/wiki/FAQ)). Make sure to not disconnect your phone.
-<p align="center"><img src="https://i.imgur.com/uSXflCJ.png" width="300"></p>
+<p align="center"><img src="/images/download_button.png" width="300"></p>
 
 11. If everything goes well, it should look like this
-<p align="center"><img src="https://i.imgur.com/qeJWt3a.png" width="200"></p><br>
+<p align="center"><img src="/images/download_done.png" width="200"></p><br>
 
 12. Before doing anything, we'll **WIPE the phone for safety.** Hold down **Vol-, and power button**, In recovery select wipe data, and then select **Format Data**.
 

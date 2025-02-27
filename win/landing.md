@@ -6,7 +6,7 @@
 ## [MTK client](/win/mtk.guide.md)
 
 # Lock:
-## [Lock and revert guide](https://github.com/driedpampas/realme-8-megaguide/wiki/Reverting)
+## [Lock and revert guide](/common/Reverting.md)
 
 * * *
 

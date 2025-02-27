@@ -5,7 +5,7 @@
 ## [MTK client](/linux/mtk.guide.md) - works no matter what
 
 # Lock:
-## [Lock and revert guide](https://github.com/driedpampas/realme-8-megaguide/wiki/Reverting)
+## [Lock and revert guide](/common/Reverting.md)
 
 * * *
 

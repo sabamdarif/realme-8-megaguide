@@ -36,15 +36,16 @@ II. [Restore](/linux/backup.md#ii-restore)
 
 2. Turn your phone off, hold both volume buttons, run this command `python mtk rl --skip userdata,super "firmware-backup"` and connect your phone to your computer.
 
-![](https://i.imgur.com/wBPSBxg.png)
+![](/images/matk_backup_cmd.png)
 
 ##### This is what will show while the backup is running:
 
-![](https://i.imgur.com/PTG4sik.png)
+![](/images/matk_backup_progress.png)
 
 2. After the command finishes, check the folder to make sure the backup was made to the correct location and that there are _51 files_
 
-![](https://i.imgur.com/HL49pJa.png)
+
+![ ](/images/firmware_backup_files.png)
 
 # You are ready. Continue to [Landing](/linux/landing.md)
 

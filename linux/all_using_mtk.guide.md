@@ -46,18 +46,23 @@ IV. [Rooting](/linux/mtk.guide.md#iv-rooting)
 ## 2. Downgrade to RUI2
 1. **Extract** and enter the folder of [MTK Client archive](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip)
 2. Open the console in [MTK Client's](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip) folder
-	<p align="center"><img src="/images/open_in_cmd.png"></p>
+   <p align="center"><img src="/images/open_in_cmd.png"></p>
 3. Get the needed libraries using command `python -m pip install -r requirements.txt`. Send the payload with `python mtk payload`. It should look like this: 
-	<p align="center"><img src="/images/mtk_payload_started.png"></p>
+   <p align="center"><img src="/images/mtk_payload_started.png"></p>
 4. Make sure your phone is powered off, hold down both **Vol+, Vol-** and connect the usb cable. You will see something like this:
-	<p align="center"><img src="/images/mtk_payload_done.png"></p>
+
+   <p align="center"><img src="/images/mtk_payload_done.png"></p>
 5. The phone is now in BROM mode. Run the [SP Flash tool](https://drive.google.com/file/d/11XeUnCYtARZg2kx7J2JWWeLULieSIYrx/view?usp=sharing) `flash_tool.exe`
 6. Click on `Options > Option...` and make sure the right **COM Port** is selected, UART enabled and baud rate is set to **921600**.
-	<p align="center"><img src="/images/sp_flash_port.png"></p>
+
+- **In Windows (It should Look Like This)**
+   <p align="center"><img src="/images/sp_flash_port.png"></p>
+- **In Linux (It should Look Like This)**
+   <p align="center"><img src="/images/linux_spflash_port.jpg"></p>
 7. Get [Haadi's A.19 RUI2 Firmware](https://drive.google.com/file/d/1Iy2hwZ0mHQtpHgpyRDRHMZv13FTTvups/view?usp=share_link) and unpack it
 8. Load `scatter.txt` from Haadi's Firmware
     <p align="center"><img src="/images/select_sctter.png"></p>
-	
+   
 > [!IMPORTANT]
 > # Remember to uncheck:
 | opporeserve2 [Signed partition] | cdt_engineering [Digital warranty codes] |
@@ -69,10 +74,10 @@ IV. [Rooting](/linux/mtk.guide.md#iv-rooting)
    <p align="center"><img src="/images/select_download_only.png" width="300"></p>
 
 10. Avoid moving your phone so as to not disconnect anything. This process will take up to 15-20 minutes. To get A.19 on your phone, click `Download`.
-	<p align="center"><img src="/images/download_button.png" width="300"></p>
+   <p align="center"><img src="/images/download_button.png" width="300"></p>
 11. If everything goes well, it should look like this
-	<p align="center"><img src="/images/download_done.png" width="200"></p><br>
-12. Before doing anything, we'll **WIPE the phone for safety.** Hold down **Vol-, and power button**, In recovery select wipe data, and then select **Format Data**.
+   <p align="center"><img src="/images/download_done.png" width="200"></p><br>
+12. Before doing anything, we'll **WIPE the phone for safety** Hold down **Vol-, and power button**, In recovery select wipe data, and then select **Format Data**.
  
 ## 3. Unlocking the bootloader
 1. Open the console in [MTK Client's](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip) folder
@@ -106,10 +111,7 @@ IV. [Rooting](/linux/mtk.guide.md#iv-rooting)
 6. The phone is now in BROM mode. Run the [SP Flash tool](https://drive.google.com/file/d/11XeUnCYtARZg2kx7J2JWWeLULieSIYrx/view?usp=sharing) -`flash_tool.exe`
 7. Click on `Options > Option...`
 8. Make sure the right **COM Port** is selected, UART enabled and baud rate is set to **921600**.
-- **In Windows (It should Look Like This)**
    <p align="center"><img src="/images/sp_flash_port.png"></p>
-- **In Linux (It should Look Like This)**
-   <p align="center"><img src="/images/linux_spflash_port.jpg"></p>
 9. Get [SG's C.18 RUI3 Firmware](https://drive.google.com/file/d/1YHSIr4itg_5dPE2IbWAH9N8g6L5CGmaG/view?usp=drive_link) and unpack it
 10. Load `MT6785_Android_scatter.txt` from SG's firmware
    <p align="center"><img src="/images/select_scatter_c.18.png"></p>
@@ -141,9 +143,9 @@ IV. [Rooting](/linux/mtk.guide.md#iv-rooting)
    <p align="center"><img src="/images/open_in_cmd.png"></p>
 3. Make sure your phone is powered off, hold down both **Vol+, Vol-** and connect the usb cable.
 4. Run  the command `python mtk r lk lk.bin`. There will now be a `lk.bin` file in **MTK Client** folder.
-	<p align="center"><img src="/images/get_lk.png"></p>
+   <p align="center"><img src="/images/get_lk.png"></p>
 5. Go to this [website](http://lkpatcher.cxwof.dev/). Upload your lk.bin file and the `lk-patched.bin` will be downloaded. Move it to `MTK Client` folder. [**Check below if you get an error**](#if-you-get-this-error--could-not-find-the-lock-sequence-no-suitable-sequence-was-found)
-	<p align="center"><img src="/images/upload_and_patch_lk.png"></p>
+   <p align="center"><img src="/images/upload_and_patch_lk.png"></p>
 6. Run command `python mtk w lk lk-patched.bin`<br><br>
 
 > [!IMPORTANT]

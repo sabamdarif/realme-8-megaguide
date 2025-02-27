@@ -48,41 +48,41 @@ IV. [Rooting](/common/experimental.md#iv-rooting)
 
 1. **Extract** and enter the folder of [MTK Client archive](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip)
 2. Open the console in [MTK Client's](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip) folder
-<p align="center"><img src="https://i.imgur.com/RJtobaI.png"></p>
+<p align="center"><img src="/images/open_in_cmd.png"></p>
 
 3. Get the needed libraries using command `python -m pip install -r requirements.txt`. Send the payload with `python mtk payload`. It should look like this:
-<p align="center"><img src="https://i.imgur.com/WSQsVj1.png"></p>
+<p align="center"><img src="/images/mtk_payload_started.png"></p>
 
 4. Make sure your phone is powered off, hold down both **Vol+, Vol-** and connect the usb cable. You will see something like this:
-<p align="center"><img src="https://i.imgur.com/lr7HIN0.png"></p>
+<p align="center"><img src="/images/mtk_payload_done.png"></p>
 
 5. The phone is now in BROM mode. Run the [SP Flash tool](https://drive.google.com/file/d/11XeUnCYtARZg2kx7J2JWWeLULieSIYrx/view?usp=sharing) `flash_tool.exe`
 6. Click on `Options > Option...` and make sure the right **COM Port** is selected, UART enabled and baud rate is set to **921600**.
-<p align="center"><img src="https://i.imgur.com/hnMsyeN.png"></p>
+<p align="center"><img src="/images/sp_flash_port.png"></p>
 
 7. Get [Haadi's A.19 RUI2 Firmware](https://drive.google.com/file/d/1Iy2hwZ0mHQtpHgpyRDRHMZv13FTTvups/view?usp=share_link) and unpack it
 8. Load `scatter.txt` from Haadi's Firmware
-<p align="center"><img src="https://i.imgur.com/VTwpXzC.png"></p>
+<p align="center"><img src="/images/select_sctter.png"></p>
 
 <div align="center">
 	<p><img src="https://i.imgur.com/sYaIBIN.png"></p><p>Remember to uncheck:</p>
 	
 | opporeserve2 [Signed partition] | cdt_engineering [Digital warranty codes] |
 | ------------------------------- | ---------------------------------------- |
-| <img src="https://i.imgur.com/9Kp65P7.png" width="150"> | <img src="https://i.imgur.com/S6XOitJ.png" width="150"> |
+| <img src="/images/uncheck_opporeserve.png" width="150"> | <img src="/images/uncheck_cdt.png" width="150"> |
 
 </div>  
 
 > [!CAUTION] 
 > 9. Remember to have **`Download Only`** mode or **you will lose critical partitions**.
 
-   <p align="center"><img src="https://i.imgur.com/M3aUNBs.png" width="300"></p>
+   <p align="center"><img src="/images/select_download_only.png" width="300"></p>
 
 10. Avoid moving your phone so as to not disconnect anything. This process will take up to 15-20 minutes. To get A.19 on your phone, click `Download`.
-<p align="center"><img src="https://i.imgur.com/uSXflCJ.png" width="300"></p>
+<p align="center"><img src="/images/download_button.png" width="300"></p>
 
 11. If everything goes well, it should look like this
-<p align="center"><img src="https://i.imgur.com/qeJWt3a.png" width="200"></p><br>
+<p align="center"><img src="/images/download_done.png" width="200"></p><br>
 
 12. Before doing anything, we'll **WIPE the phone for safety.** Hold down **Vol-, and power button**, In recovery select wipe data, and then select **Format Data**.
 
@@ -91,9 +91,9 @@ IV. [Rooting](/common/experimental.md#iv-rooting)
 1. Open the console in [MTK Client's](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip) folder
 2. Reboot your device, turn it off and Hold down both **Vol+, Vol-** - **(Don't leave the buttons until the command is done)**
 3. Type `python mtk e metadata,userdata,md_udc` - This command wipes your data. It should look like this:
-   <p align="center"><img src="https://i.imgur.com/HfPsrpU.png"></p>
+   <p align="center"><img src="/images/mtk_wipe_data.png"></p>
 4. Unlock the bootloader using command `python mtk da seccfg unlock`, the output should look like this
-   <p align="center"><img src="https://i.imgur.com/Su8RtHk.png"></p>
+   <p align="center"><img src="/images/mtk_unloack.png"></p>
 5. Reboot with `python mtk reset` or hold all hardware buttons until the phone reboots.
 
 > [!IMPORTANT]  
@@ -108,28 +108,28 @@ IV. [Rooting](/common/experimental.md#iv-rooting)
 
 1. Go back to the folder of [MTK Client](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip)
 2. Open the console again in [MTK Client's](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip) folder
-   <p align="center"><img src="https://i.imgur.com/RJtobaI.png"></p>
+   <p align="center"><img src="/images/open_in_cmd.png"></p>
 3. Send the payload with `python mtk payload`. It should look like this:
-   <p align="center"><img src="https://i.imgur.com/WSQsVj1.png"></p>
+   <p align="center"><img src="/images/mtk_payload_started.png"></p>
 4. Make sure your phone is powered off, hold down both **Vol+, Vol-** and connect the usb cable.
 5. MTK Client should output something like this:
-   <p align="center"><img src="https://i.imgur.com/lr7HIN0.png"></p>
+   <p align="center"><img src="/images/mtk_payload_done.png"></p>
 6. The phone is now in BROM mode. Run the [SP Flash tool](https://drive.google.com/file/d/11XeUnCYtARZg2kx7J2JWWeLULieSIYrx/view?usp=sharing) -`flash_tool.exe`
 7. Click on `Options > Option...`
 8. Make sure the right **COM Port** is selected, UART enabled and baud rate is set to **921600**.
-   <p align="center"><img src="https://i.imgur.com/hnMsyeN.png"></p>
+   <p align="center"><img src="/images/sp_flash_port.png"></p>
 9. Get [SG's C.18 RUI3 Firmware](https://drive.google.com/file/d/1YHSIr4itg_5dPE2IbWAH9N8g6L5CGmaG/view?usp=drive_link) and unpack it
 10. Load `MT6785_Android_scatter.txt` from SG's firmware
-<p align="center"><img src="https://i.imgur.com/8APQvkx.png"></p>
+<p align="center"><img src="/images/select_scatter_c.18.png"></p>
 
 11. Remember to have `Download Only` mode
-    <p align="center"><img src="https://i.imgur.com/M3aUNBs.png" width="300"></p>
+    <p align="center"><img src="/images/select_download_only.png" width="300"></p>
 
 12. Place your phone on a stable surface, to not disconnect anything. This process will take up to 15-20 minutes. To get C.18 on your phone, click `Download`. [**No progress? Click me**](https://github.com/driedpampas/realme-8-megaguide/wiki/FAQ)
-<p align="center"><img src="https://i.imgur.com/uSXflCJ.png" width="300"></p>
+<p align="center"><img src="/images/download_button.png" width="300"></p>
 
 13. If everything goes well, it should look like this:
-<p align="center"><img src="https://i.imgur.com/qeJWt3a.png" width="200"></p>
+<p align="center"><img src="/images/download_done.png" width="200"></p>
 
 ### ❗ Check [FAQ (frequently asked questions)](https://github.com/driedpampas/realme-8-megaguide/wiki/FAQ) if something does not work or you have questions
 
@@ -156,9 +156,9 @@ IV. [Rooting](/common/experimental.md#iv-rooting)
 
 1. Go back to the folder of [MTK Client](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip)
 2. Open the console again in [MTK Client's](https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip) folder
-   <p align="center"><img src="https://i.imgur.com/RJtobaI.png"></p>
+   <p align="center"><img src="/images/open_in_cmd.png"></p>
 3. Send the payload with `python mtk payload`. It should look like this:
-   <p align="center"><img src="https://i.imgur.com/WSQsVj1.png"></p>
+   <p align="center"><img src="/images/mtk_payload_started.png"></p>
 4. Make sure your phone is powered off, hold down both **Vol+, Vol-** and connect the usb cable.
 5. Run `python mtk w vbmeta vbmeta.img` to flash the vbmeta image.
 6. Run `python mtk w recovery recovery.img` to flash the custom recovery you downloaded from the [recoveries page](/common/recovery.md). Your phone might reset itself.
