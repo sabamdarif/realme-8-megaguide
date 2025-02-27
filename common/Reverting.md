@@ -51,10 +51,11 @@ Use this to revert to stock RealmeUI 3 and lock the bootloader.
 11. Place your phone on a stable surface. Do not disconnect anything. This process will take up to **15-20 minutes**. To get a log on your phone, click below:
    
    [No progress? Click me](#)
+   ![Image](/images/download_button.png)
 
 12. If everything goes well, it should look like this:
 
-   ![Image](/images/download_button.png)
+   ![Image](/images/download_done.png)
 
 ---
 
@@ -63,8 +64,7 @@ Use this to revert to stock RealmeUI 3 and lock the bootloader.
 1. Make sure your phone is **off** and hold down **both** Vol+ Vol- (Don't leave the buttons until the command is done)
 
 2. Type `python mtk w attestation_key.bin avb_custom_key.img` . This command will wipe your data and convert your phone. It should look like this:
-
-   ![Image](/images/download_done.png)
+![Image](/images/mtk_wipe_data.png)
 
 3. Lock the bootloader using command: `python mtk seccfg lock`
 
